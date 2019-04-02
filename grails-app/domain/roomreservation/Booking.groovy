@@ -1,5 +1,8 @@
 package roomreservation
 
+import grails.rest.Resource
+
+@Resource
 class Booking {
 
     Person booker
