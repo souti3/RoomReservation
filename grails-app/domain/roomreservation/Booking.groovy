@@ -2,7 +2,7 @@ package roomreservation
 
 import grails.rest.Resource
 
-@Resource
+@Resource(uri = "/bookings")
 class Booking {
 
     Person booker
