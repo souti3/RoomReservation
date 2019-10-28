@@ -7,5 +7,8 @@ class Person {
     String email
 
     static constraints = {
+        firstName(blank: false)
+        lastName(blank: false)
+        email(unique: true, email: true)
     }
 }

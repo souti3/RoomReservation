@@ -4,15 +4,15 @@ import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
 class PersonSpec extends Specification implements DomainUnitTest<Person> {
+    void "First name should NEITHER be null NOR blank"(){
+        when:
+        domain.firstName = null
+        then:
+        !domain.validate(['firstName'])
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
+        when:
+        domain.firstName = ' '
+        then:
+        !domain.validate(['firstName'])
     }
 }
